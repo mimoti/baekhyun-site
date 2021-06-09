@@ -1,0 +1,481 @@
+@charset "UTF-8";
+@media screen and (max-width: 1024px) {
+  body {
+    position: static;
+    cursor: pointer;
+  }
+  body a {
+    cursor: pointer;
+  }
+  body .cursor, body .follower {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  h2 {
+    margin-bottom: 40px;
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  h2 {
+    margin-bottom: 40px;
+    font-size: 32px;
+  }
+}
+
+@media screen and (max-width: 689px) {
+  .humburger {
+    display: block;
+  }
+  .humburger .sp-nav ul {
+    top: 23%;
+  }
+  .humburger .sp-nav li {
+    font-size: 28px;
+    line-height: 2.5em;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .humburger .sp-nav ul {
+    top: 25%;
+  }
+  .humburger .sp-nav li {
+    font-size: 24px;
+    line-height: 2em;
+  }
+}
+
+@media screen and (max-width: 689px) {
+  header {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  header {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  footer .back-top {
+    bottom: 0;
+    right: 0;
+  }
+  footer .back-top img {
+    background-color: #000;
+  }
+  footer .back-top img:hover {
+    margin-bottom: 0;
+  }
+  footer .loginbanner img {
+    padding: 2.5%;
+    -webkit-box-shadow: 10px 10px 20px #c5c4be, -10px -10px 20px #ffffff;
+            box-shadow: 10px 10px 20px #c5c4be, -10px -10px 20px #ffffff;
+  }
+  footer .loginbanner img:hover {
+    opacity: 1;
+  }
+  footer .loginbanner img:active {
+    -webkit-box-shadow: inset 10px 10px 20px #c5c4be, inset -10px -10px 20px #ffffff;
+            box-shadow: inset 10px 10px 20px #c5c4be, inset -10px -10px 20px #ffffff;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .top-contents .new-news a {
+    text-decoration: underline;
+  }
+  .top-contents .new-news a::after {
+    display: none;
+  }
+  .top-contents .button-discography {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .top-contents .new-news {
+    bottom: 5vh;
+    line-height: 1.5em;
+    text-align: left;
+    font-size: 18px;
+  }
+  .top-contents .new-news br {
+    display: block;
+  }
+  .top-contents .new-news a {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .top-contents .new-news {
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    bottom: 5vh;
+    padding: 6px 0 5px 5%;
+    margin-left: 5%;
+    line-height: 1.5em;
+    text-align: left;
+    font-size: 18px;
+  }
+  .top-contents .new-news br {
+    display: block;
+  }
+  .top-contents .new-news a {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .slick-slider {
+    margin-bottom: 100px;
+  }
+  .slick-slider .slick-prev:hover:before, .slick-slider .slick-next:hover:before {
+    -webkit-animation-play-state: paused;
+            animation-play-state: paused;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .slick-slider {
+    margin-bottom: 80px;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  main .inner {
+    margin: 0 5%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  main {
+    padding-top: 80px;
+  }
+  main .inner {
+    margin: 0 5%;
+  }
+  main .inner .top-news {
+    margin-bottom: 100px;
+  }
+  main .inner .top-news p {
+    position: absolute;
+    top: 30px;
+    right: 1%;
+  }
+  main .inner .top-news p:hover {
+    -webkit-transform: none;
+            transform: none;
+  }
+  main .inner .top-news p::after {
+    display: none;
+  }
+  main .inner .top-news p:hover::after {
+    -webkit-transform: none;
+            transform: none;
+  }
+  main .inner .top-news p a::after {
+    content: ' ⇨';
+  }
+  main .inner .top-news ul a li {
+    text-align: left;
+  }
+  main .inner .youtube {
+    margin-bottom: 100px;
+  }
+  main .inner .youtube .container {
+    display: block;
+  }
+  main .inner .youtube .container .item {
+    width: 100%;
+    padding-top: 55%;
+    margin-bottom: 30px;
+  }
+  main .inner .youtube p {
+    position: absolute;
+    top: 30px;
+    right: 1%;
+  }
+  main .inner .youtube p:hover {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  main .inner .youtube p::after {
+    display: none;
+  }
+  main .inner .youtube p a::after {
+    content: ' ⇨';
+  }
+}
+
+@media screen and (max-width: 599px) {
+  main .inner .top-news {
+    margin-bottom: 80px;
+  }
+  main .inner .youtube {
+    margin-bottom: 50px;
+  }
+  main .inner .youtube .item {
+    padding-top: 70%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #news main, #profile main, #discography main, #video main, #fanclub main {
+    padding-top: 120px;
+  }
+  #news main .inner, #profile main .inner, #discography main .inner, #video main .inner, #fanclub main .inner {
+    margin: 0 5%;
+  }
+}
+
+@media screen and (max-width: 689px) {
+  #discography main section, #video main section {
+    margin-bottom: 40px;
+  }
+  #discography main section .container, #video main section .container {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  #discography main section .container .item, #video main section .container .item {
+    width: calc(100% / 2.2);
+  }
+  #discography main section .container .item:hover, #video main section .container .item:hover {
+    background-color: #222;
+  }
+  #discography main section .container .item a, #video main section .container .item a {
+    padding: 0;
+    margin-bottom: 40px;
+  }
+  #discography main section .container .item a img, #video main section .container .item a img {
+    margin-bottom: 5px;
+  }
+  #discography main section .container .item a p, #video main section .container .item a p {
+    margin-top: 10px;
+    line-height: 1.5em;
+  }
+  #discography main section:last-child, #video main section:last-child {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #news main ul.newslist {
+    margin-bottom: 20px;
+  }
+  #news main ul.newslist li a span {
+    text-decoration: underline;
+  }
+  #news main ul.newslist li a::after {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  #news main .news-contents {
+    margin-bottom: 50px;
+  }
+  #news main .news-contents ul.newslist li {
+    text-align: left;
+    margin-left: 0;
+    text-indent: 0;
+  }
+  #news main .news-contents ul.newslist li a time {
+    display: block;
+    margin-right: 0;
+    font-family: 'Josefin Sans', "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    color: #b4ad7e;
+  }
+  #news main .news-contents .news-button ul.button li {
+    margin: 0 2%;
+  }
+}
+
+@media screen and (max-width: 689px) {
+  #profile main .inner article {
+    margin-bottom: 100px;
+  }
+  #profile main .inner .gallery {
+    margin-bottom: 90px;
+  }
+  #profile main .inner .gallery-sizer, #profile main .inner .gallery-item {
+    width: calc(100% / 2.1);
+  }
+  #profile main .inner .gallery-item {
+    padding: 2%;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  #profile main .inner article {
+    margin-bottom: 80px;
+  }
+  #profile main .inner article p {
+    text-align: justify;
+  }
+  #profile main .inner .gallery {
+    margin-bottom: 40px;
+  }
+  #profile main .inner .gallery-item {
+    padding: 1%;
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 789px) {
+  #discography .disc {
+    display: block;
+  }
+  #discography .disc .item {
+    text-align: center;
+    width: auto;
+  }
+  #discography .disc .item img {
+    width: calc(100% / 1.5);
+    margin-bottom: 40px;
+    padding-right: 0;
+  }
+  #discography .disc .item h3, #discography .disc .item p, #discography .disc .item ol {
+    text-align: left;
+  }
+  #discography .disc .track {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  #discography .disc .track .item:first-child {
+    width: 50%;
+  }
+  #discography .disc .track .item:last-child {
+    width: 80%;
+  }
+  #discography .disc .track .item li {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  #discography .disc .item img {
+    width: 100%;
+  }
+  #discography .disc .item h3 {
+    font-size: 18px;
+  }
+  #discography .disc .item:last-child {
+    margin-bottom: 40px;
+  }
+  #discography .track {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #discography .track .item {
+    width: 100%;
+  }
+  #discography .track p {
+    font-size: 16px;
+  }
+  #discography .track li {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #fanclub .sphone-responsive_addp {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  #fanclub main .inner section {
+    margin-bottom: 80px;
+  }
+  #fanclub main .inner section .container {
+    margin-bottom: 30px;
+  }
+  #fanclub main .inner section .container p {
+    display: none;
+  }
+  #fanclub main .inner section form {
+    background-color: #e8e6df;
+    border-radius: 2px;
+    margin: 0 3%;
+    padding: 30px 15px 30px;
+    text-align: left;
+  }
+  #fanclub main .inner section form::before {
+    content: '既に会員の方はこちら';
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-left: 3px;
+  }
+  #fanclub main .inner section form p {
+    margin-top: 30px;
+  }
+  #fanclub main .inner section form label {
+    display: none;
+  }
+  #fanclub main .inner section form input {
+    width: 100%;
+    margin: 0 auto;
+  }
+  #fanclub main .inner section form .link_cust {
+    text-align: center;
+    font-size: 12px;
+  }
+  #fanclub main .inner section form .link_cust a {
+    color: #333;
+  }
+  #fanclub main .inner section .button {
+    width: 100%;
+    height: 50px;
+    line-height: 53px;
+  }
+  #fanclub main .inner section .button a {
+    font-size: 16px;
+  }
+  #fanclub main .inner section .newjoin {
+    margin-bottom: 60px;
+  }
+  #fanclub main .inner section .newjoin .sp-responsive {
+    background-color: #e8e6df;
+    padding: 30px 15px;
+    margin: 0 3% 60px;
+    border-radius: 2px;
+  }
+  #fanclub main .inner section .newjoin .sp-responsive .sphone-responsive_addp {
+    display: block;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.3em;
+    margin-bottom: 25px;
+    margin-left: 3px;
+  }
+  #fanclub main .inner section ul.subnav {
+    display: none;
+  }
+  #fanclub main .inner section .inner {
+    margin: 0 5%;
+  }
+  #fanclub main .inner section .inner p {
+    line-height: 1.5em;
+  }
+  #fanclub main .inner section:last-child {
+    margin-bottom: 50px;
+  }
+}
+/*# sourceMappingURL=responsive.css.map */

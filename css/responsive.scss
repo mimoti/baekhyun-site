@@ -1,0 +1,600 @@
+
+//設定---------------------------
+$font-color: #b4ad7e;
+$h2-fontSize: 32px;
+$h3-fontSize: 22px;
+
+
+//mixinの引数は$breakpoint、引数の初期値はsp
+@mixin mq($breakpoint: sp) {
+  @media #{map-get(
+    //map-get関数の$map部
+    (
+      "sp": "screen and (max-width: 599px)",
+      "tab": "screen and (max-width: 1024px)",
+      "pc": "screen and (min-width: 1025px)",
+    ),
+
+    //map-get関数の$key部
+    $breakpoint
+    )}{
+
+    //呼び出し側の内容をもらう
+    @content;
+  }
+}
+
+//共通---------------------------
+body {
+  @include mq('tab') {
+    position: static;
+    cursor: pointer;
+    a {
+      cursor: pointer;
+    }
+    .cursor, .follower {
+      display: none;
+    }
+  }
+}
+
+h2 {
+  @include mq('tab') {
+    margin-bottom: 40px;
+    font-size: 40px;
+  }
+  @include mq('sp') {
+    margin-bottom: 40px;
+    font-size: $h2-fontSize;
+  }
+}
+
+
+
+//ヘッダー---------------------------
+//スマホ、タブレット用ヘッダー　PCサイズの時には非表示
+.humburger {
+  @media screen and (max-width:689px) {
+    display: block;
+    .sp-nav{
+      ul {
+        top: 23%;
+      }
+      li {
+        font-size: 28px;
+        line-height: 2.5em;
+      }
+    }
+  }
+  @include mq('sp') {
+    .sp-nav{
+      ul {
+        top: 25%;
+      }
+      li {
+        font-size: 24px;
+        line-height: 2em;
+      }
+    }
+  }
+}
+
+
+//PC用ヘッダー　スマホ、タブレットの時は非表示
+header {
+  @media screen and (max-width:689px) {
+    display: none;
+  }
+  @include mq('sp') {
+    display: none;
+  }
+}
+
+
+//フッター---------------------------
+footer {
+  @include mq('tab') {
+    .back-top {
+      bottom: 0;
+      right: 0;
+      img {
+        background-color: #000;
+        &:hover {
+          margin-bottom: 0;
+        }
+      }
+    }
+    .loginbanner {
+      img {
+        padding: 2.5%;
+
+        //ニューモーフィズム
+        box-shadow:  10px 10px 20px #c5c4be,
+        -10px -10px 20px #ffffff;
+        &:hover {
+          opacity: 1;
+        }
+        &:active {
+          box-shadow: inset 10px 10px 20px #c5c4be,
+                inset -10px -10px 20px #ffffff;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+//トップページ---------------------------
+.top-contents {
+  @include mq('tab') {
+    .new-news {
+      a {
+        text-decoration: underline;
+        &::after {
+          display: none;
+        }
+      }
+    }
+    .button-discography {
+      display: none;    
+    }
+  }
+  @include mq('sp') {
+    .new-news {
+      bottom: 5vh;
+      line-height: 1.5em;
+      text-align: left;
+      font-size: 18px;
+      br {
+        display: block;
+      }
+      a {
+        display: block;
+      }
+    }
+  }
+  @media screen and (max-width:375px) {
+    .new-news {
+      background-color: rgba(0, 0, 0, .4);
+      width: 100%;
+      bottom: 5vh;
+      padding: 6px 0 5px 5%;
+      margin-left: 5%;
+      line-height: 1.5em;
+      text-align: left;
+      font-size: 18px;
+      br {
+        display: block;
+      }
+      a {
+        display: block;
+      }
+    }
+  }
+}
+
+//スライドショー
+.slick-slider {
+  @include mq('tab') {
+    margin-bottom: 100px;
+    .slick-prev:hover:before, .slick-next:hover:before {
+      animation-play-state: paused;
+    }
+  }
+  @include mq('sp') {
+    margin-bottom: 80px;
+  }
+}
+
+//トップページメインコンテンツ
+main {
+  @media screen and (max-width:1600px)  {
+    .inner {
+      margin: 0 5%;
+    }
+  }
+  @include mq('tab') {
+    padding-top: 80px;
+    .inner {
+      margin: 0 5%;
+  
+      //NEWS
+      .top-news {
+        margin-bottom: 100px;
+        p {
+          position: absolute;
+          top: 30px;
+          right: 1%;
+          &:hover {
+            transform: none;
+          }
+          &::after {
+            display: none;
+          } 
+          &:hover::after {
+            transform: none;
+          }   
+          a {
+            &::after {
+              content: ' ⇨';
+            }
+          }
+        }
+        ul {
+          a {
+            li {
+              text-align: left;
+            }
+          }
+        }
+      }
+  
+      //Youtube VIDEO
+      .youtube {
+        margin-bottom: 100px;
+          .container {
+            display: block;
+            .item {
+              width: 100%;
+              padding-top:55%;
+              margin-bottom: 30px;
+          }
+        }
+        p {
+          position: absolute;
+          top: 30px;
+          right: 1%;
+          &:hover {
+            transform: translateX(0);
+          }
+          &::after {
+            display: none;
+          }  
+          a {
+            &::after {
+              content: ' ⇨';
+            }
+          }
+        }
+      }
+    }
+  }
+  @include mq('sp') {
+    .inner {
+  
+      //NEWS
+      .top-news {
+        margin-bottom: 80px;
+      }
+  
+      .youtube {
+        margin-bottom: 50px;
+        .item {
+          padding-top:70%;
+        }
+      }
+    }
+  }
+}
+
+
+//コンテンツ共通---------------------------
+//ヘッダー、インナー幅、文字センター共通
+#news, #profile, #discography, #video, #fanclub {
+  @include mq('tab') {
+    main {
+      padding-top: 120px;
+      .inner {
+        margin: 0 5%;
+      }
+    }  
+  }
+}
+
+#discography, #video {
+  main {
+    @media screen and (max-width:689px) {
+      section {
+        margin-bottom: 40px;
+        .container {
+          justify-content: space-between;
+          .item {
+            width: calc(100% / 2.2);
+            &:hover {
+              background-color: #222;
+            }  
+            a {
+              padding: 0;
+              margin-bottom: 40px;
+              img {
+                margin-bottom: 5px;
+              }
+              p {
+                margin-top: 10px;
+                line-height: 1.5em;
+              }
+            }
+          }
+        }
+        &:last-child {
+          margin-bottom: 10px;
+        }
+      }  
+    }
+  }
+}
+
+
+
+//ニュースページ---------------------------
+#news {
+  @include mq('tab') {
+    main {
+      ul.newslist {
+        margin-bottom: 20px;
+        li {
+          a {
+            span {
+              text-decoration: underline;
+            }
+            &::after {
+              display: none;
+            }
+          }  
+        }
+      }
+    }
+  }
+  @include mq('sp') {
+    main {
+      .news-contents {
+        margin-bottom: 50px;
+        ul.newslist {
+          li {
+            text-align: left;
+            margin-left: 0;
+            text-indent: 0;
+            a {
+              time {
+                display: block;
+                margin-right: 0;
+                font-family: 'Josefin Sans', "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+                color: $font-color;
+              }
+            }  
+          }
+        }
+      
+        .news-button {
+          ul.button {
+            li {
+              margin: 0 2%;
+            }
+          }
+        }
+      }
+    }  
+  }
+}
+
+
+//プロフィールページ---------------------------
+#profile {
+  @media screen and (max-width:689px) {
+    main {
+      .inner {
+        article {
+          margin-bottom: 100px;
+        }
+  
+        //lightgallery
+        .gallery {
+          margin-bottom: 90px;
+        }
+        .gallery-sizer, .gallery-item {
+          width: calc(100% / 2.1);
+        }
+        .gallery-item {
+          padding: 2%;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+
+  @include mq('sp') {
+    main {
+      .inner {
+        article {
+          margin-bottom: 80px;
+          p {
+            text-align: justify;
+          }
+        }
+  
+        //lightgallery
+        .gallery {
+          margin-bottom: 40px;
+        }
+        .gallery-item {
+          padding: 1%;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+
+
+
+//ディスコグラフィのdiscコンテンツ---------------------------
+#discography {
+  @media screen and (max-width:789px) {
+    .disc {
+      display: block;
+      .item {
+        text-align: center;
+        width: auto;
+        img {
+          width: calc(100% / 1.5);
+          margin-bottom: 40px;
+          padding-right: 0;
+        }
+        h3, p, ol {
+          text-align: left;
+        }
+      }
+      .track {
+        display: flex;
+        justify-content: space-between;
+        .item {
+          &:first-child {
+            width: 50%;
+          }
+          &:last-child {
+            width: 80%;
+          }
+          li {
+            margin-right: 0;
+          }
+        }
+      }    
+    }
+  }
+  @include mq('sp') {
+    .disc {
+      .item {
+        img {
+          width: 100%;
+        }
+        h3 {
+          font-size: 18px;
+        }
+        &:last-child {
+          margin-bottom: 40px;
+        }
+      }
+    }
+    .track {
+      // display: block;
+      flex-direction: column;
+      .item {
+        width: 100%;
+      }
+      p {
+        font-size: 16px;   
+      }
+      li {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+
+
+
+//ファンクラブページ---------------------------
+#fanclub {
+  @include mq('tab') {
+    .sphone-responsive_addp {
+      display: none;
+    }
+  }
+  @include mq('sp') {
+    main {
+      .inner {
+        section {
+          margin-bottom: 80px;
+
+          //ログインフォーム
+          .container {
+            margin-bottom: 30px;
+            p {
+              display: none;
+            }
+          }
+          form {
+            background-color: #e8e6df;
+            border-radius: 2px;
+            margin: 0 3%;
+            padding: 30px 15px 30px;
+            text-align: left;
+            &::before {
+              content: '既に会員の方はこちら';
+              font-size: 16px;
+              font-weight: bold;
+              color: #333;
+              margin-left: 3px;
+            }
+            p {
+              margin-top: 30px;
+            }
+            label {
+              display: none;
+            }
+            input {
+              width: 100%;
+              margin: 0 auto;
+            }
+
+            .link_cust {
+              text-align: center;
+              font-size: 12px;
+              a {
+                color: #333;
+              }
+            }
+  
+          }
+
+          .button {
+            width: 100%;
+            height: 50px;
+            line-height: 53px;
+            a {
+              font-size: 16px;
+            }
+          }
+
+          .newjoin {
+            margin-bottom: 60px;
+            .sp-responsive {
+              background-color: #e8e6df;
+              padding: 30px 15px;
+              margin: 0 3% 60px;
+              border-radius: 2px;  
+              .sphone-responsive_addp {
+                display: block;
+                color: #333;
+                font-size: 16px;
+                font-weight: bold;
+                line-height: 1.3em;
+                margin-bottom: 25px;
+                margin-left: 3px;
+              }
+  
+            }
+          }
+          ul.subnav {
+            display: none;
+          }
+
+          //ファンクラブの特典内容など
+          .inner {
+            margin: 0 5%;
+            p {
+              line-height: 1.5em;
+            }
+          }
+          &:last-child {
+            margin-bottom: 50px;
+          }
+        }
+      }
+    }
+  }
+}
+
