@@ -4,11 +4,9 @@ body {
   position: relative;
   cursor: none;
 }
-
 body a {
   cursor: none;
 }
-
 body .cursor, body .follower {
   border-radius: 50%;
   position: absolute;
@@ -17,28 +15,21 @@ body .cursor, body .follower {
   cursor: none;
   pointer-events: none;
 }
-
 body .cursor {
   width: 8px;
   height: 8px;
   background-color: #000;
   z-index: 1001;
 }
-
 body .follower {
   width: 40px;
   height: 40px;
   background-color: rgba(255, 30, 86, 0.5);
   z-index: 1000;
-  -webkit-transition: -webkit-transform ease .2s;
-  transition: -webkit-transform ease .2s;
-  transition: transform ease .2s;
-  transition: transform ease .2s, -webkit-transform ease .2s;
+  transition: transform ease 0.2s;
 }
-
 body .follower.is-active {
-  -webkit-transform: scale(2);
-          transform: scale(2);
+  transform: scale(2);
 }
 
 body.is-fixed {
@@ -51,7 +42,7 @@ body.is-fixed {
 }
 
 .page-animate::before {
-  content: '';
+  content: "";
   position: fixed;
   top: 0;
   width: 100%;
@@ -60,12 +51,11 @@ body.is-fixed {
   z-index: 9999;
   pointer-events: none;
   left: 100%;
-  -webkit-transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .page-animate::after {
-  content: '';
+  content: "";
   position: fixed;
   top: 0;
   width: 100%;
@@ -74,7 +64,6 @@ body.is-fixed {
   z-index: 9999;
   pointer-events: none;
   right: 100%;
-  -webkit-transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -88,7 +77,7 @@ body.is-fixed {
 
 .page {
   font-size: 14px;
-  font-family: 'Josefin Sans', "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  font-family: "Josefin Sans", "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
   color: #fff;
 }
 
@@ -123,7 +112,6 @@ h3 {
   height: 100%;
   z-index: 999;
 }
-
 .humburger .sp-header {
   width: 100%;
   height: 60px;
@@ -131,7 +119,6 @@ h3 {
   position: fixed;
   z-index: 997;
 }
-
 .humburger .sp-header h1 {
   font-size: 26px;
   font-family: Arial, Helvetica, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
@@ -143,7 +130,6 @@ h3 {
   position: fixed;
   z-index: 999;
 }
-
 .humburger .sp-header .nav_toggle {
   position: relative;
   top: 18px;
@@ -153,37 +139,26 @@ h3 {
   position: fixed;
   z-index: 999;
 }
-
 .humburger .sp-header .nav_toggle i {
   display: block;
   width: 30px;
   height: 2px;
   background-color: #fff;
   position: absolute;
-  -webkit-transition: opacity .5s, -webkit-transform .5s;
-  transition: opacity .5s, -webkit-transform .5s;
-  transition: transform .5s, opacity .5s;
-  transition: transform .5s, opacity .5s, -webkit-transform .5s;
+  transition: transform 0.5s, opacity 0.5s;
 }
-
 .humburger .sp-header .nav_toggle i:nth-child(1) {
   top: 5px;
 }
-
 .humburger .sp-header .nav_toggle i:nth-child(2) {
   bottom: 5px;
 }
-
 .humburger .nav_toggle.show i:nth-child(1) {
-  -webkit-transform: translateY(5px) rotate(-45deg);
-          transform: translateY(5px) rotate(-45deg);
+  transform: translateY(5px) rotate(-45deg);
 }
-
 .humburger .nav_toggle.show i:nth-child(2) {
-  -webkit-transform: translateY(-7px) rotate(45deg);
-          transform: translateY(-7px) rotate(45deg);
+  transform: translateY(-7px) rotate(45deg);
 }
-
 .humburger .sp-nav {
   background-color: rgba(0, 0, 0, 0.8);
   position: fixed;
@@ -191,7 +166,6 @@ h3 {
   width: 100%;
   text-align: center;
 }
-
 .humburger .sp-nav ul {
   width: 100%;
   position: absolute;
@@ -205,39 +179,28 @@ header {
   height: 60px;
   z-index: 999;
 }
-
 header .inner {
   background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
   width: 100%;
   z-index: 999;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 header .inner h1 {
   font-size: 30px;
   font-weight: bold;
   line-height: 60px;
   margin-left: 20px;
 }
-
 header .inner ul {
   margin-right: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 header .inner ul li {
   line-height: 60px;
   margin-right: 20px;
 }
-
 header .inner ul li:last-child {
   background-color: rgba(102, 102, 102, 0.5);
   height: 40px;
@@ -247,19 +210,15 @@ header .inner ul li:last-child {
   line-height: 40px;
   border-radius: 5px;
 }
-
 header .inner ul li:last-child a {
   display: block;
 }
-
 header .inner ul li:last-child a:hover {
   color: #000;
 }
-
 header .inner ul li:last-child:hover {
   background-color: rgba(200, 200, 200, 0.5);
 }
-
 header .inner ul li a:hover {
   color: #aaa;
 }
@@ -270,32 +229,26 @@ footer {
   padding-bottom: 60px;
   color: #666;
 }
-
 footer .back-top {
   position: fixed;
   bottom: 10%;
   right: 4%;
   display: none;
 }
-
 footer .back-top img {
   width: 50px;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 18px;
-  -webkit-transition: .5s;
-  transition: .5s;
+  transition: 0.5s;
 }
-
 footer .back-top img:hover {
   background-color: #000;
   margin-bottom: 5px;
 }
-
 footer .loginbanner {
   margin: 0 auto;
   padding: 80px 20px 60px;
 }
-
 footer .loginbanner img {
   width: auto;
   padding: 1%;
@@ -303,58 +256,42 @@ footer .loginbanner img {
   height: auto;
   border-radius: 30px;
   background: #e8e6df;
-  -webkit-box-shadow: 20px 20px 60px #c5c4be, -20px -20px 60px #ffffff;
-          box-shadow: 20px 20px 60px #c5c4be, -20px -20px 60px #ffffff;
+  box-shadow: 20px 20px 60px #c5c4be, -20px -20px 60px #ffffff;
 }
-
 footer .loginbanner img:hover {
-  opacity: .7;
+  opacity: 0.7;
 }
-
 footer .loginbanner img:active {
   border-radius: 30px;
   background: #e8e6df;
-  -webkit-box-shadow: inset 10px 10px 60px #c5c4be, inset -10px -10px 20px #ffffff;
-          box-shadow: inset 10px 10px 60px #c5c4be, inset -10px -10px 20px #ffffff;
+  box-shadow: inset 10px 10px 60px #c5c4be, inset -10px -10px 20px #ffffff;
 }
-
 footer .loginbanner img {
   width: auto;
 }
-
 footer .icon {
   font-size: 20px;
   margin-bottom: 30px;
 }
-
 footer .icon a {
   color: #666;
   margin: 0 10px;
 }
-
 footer .icon a:hover {
   color: #000;
 }
-
 footer .footnav ul {
   margin-bottom: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
-
 footer .footnav ul li {
   line-height: 1.1em;
   margin: 0 10px;
 }
-
 footer .footnav ul a {
   color: #666;
 }
-
 footer .footnav ul a:hover {
   color: #000;
 }
@@ -373,94 +310,63 @@ footer .footnav ul a:hover {
   position: relative;
   top: 87vh;
 }
-
 .slider img {
   margin: 0 auto;
 }
 
 .top-contents {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 .top-contents p {
   font-size: 22px;
   position: relative;
 }
-
 .top-contents .new-news {
   top: 85vh;
   left: 2vw;
   line-height: 1.2em;
 }
-
 .top-contents .new-news a::after {
   position: absolute;
   bottom: -8px;
   left: 0;
-  content: '';
+  content: "";
   width: 100%;
   height: 2px;
   background: #fff;
-  -webkit-transform: scale(0, 1);
-          transform: scale(0, 1);
-  -webkit-transform-origin: left top;
-          transform-origin: left top;
-  -webkit-transition: -webkit-transform .3s;
-  transition: -webkit-transform .3s;
-  transition: transform .3s;
-  transition: transform .3s, -webkit-transform .3s;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: transform 0.3s;
 }
-
 .top-contents .new-news a:hover::after {
-  -webkit-transform: scale(1, 1);
-          transform: scale(1, 1);
+  transform: scale(1, 1);
 }
-
 .top-contents .new-news br {
   display: none;
 }
-
 .top-contents .button-discography {
   top: 85vh;
   right: 4vh;
 }
-
 .top-contents .button-discography a {
   display: block;
-  -webkit-transition: -webkit-transform .3s;
-  transition: -webkit-transform .3s;
-  transition: transform .3s;
-  transition: transform .3s, -webkit-transform .3s;
+  transition: transform 0.3s;
 }
-
 .top-contents .button-discography a:hover {
-  -webkit-transform: translateX(-20px);
-          transform: translateX(-20px);
+  transform: translateX(-20px);
 }
-
 .top-contents .button-discography a::after {
   position: absolute;
   bottom: 0;
   right: -30px;
-  content: '➡';
-  -webkit-transform: scale(0, 1);
-          transform: scale(0, 1);
-  -webkit-transform-origin: left top;
-          transform-origin: left top;
-  -webkit-transition: -webkit-transform .3s;
-  transition: -webkit-transform .3s;
-  transition: transform .3s;
-  transition: transform .3s, -webkit-transform .3s;
+  content: "➡";
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: transform 0.3s;
 }
-
 .top-contents .button-discography a:hover::after {
-  -webkit-transform: scale(1, 1);
-          transform: scale(1, 1);
+  transform: scale(1, 1);
 }
 
 main {
@@ -469,76 +375,51 @@ main {
   background-color: #222;
   overflow: hidden;
 }
-
 main .inner {
   max-width: 1500px;
   margin: 0 auto;
 }
-
 main .inner .top-news {
   margin-bottom: 160px;
   position: relative;
   opacity: 0;
 }
-
 main .inner .top-news p {
   position: absolute;
   top: 40px;
   right: 0;
-  -webkit-transition: -webkit-transform .3s;
-  transition: -webkit-transform .3s;
-  transition: transform .3s;
-  transition: transform .3s, -webkit-transform .3s;
+  transition: transform 0.3s;
 }
-
 main .inner .top-news p:hover {
-  -webkit-transform: translateX(-20px);
-          transform: translateX(-20px);
+  transform: translateX(-20px);
 }
-
 main .inner .top-news p::after {
   position: absolute;
   bottom: 0;
   right: -20px;
-  content: '⇨';
-  -webkit-transform: scale(0, 1);
-          transform: scale(0, 1);
-  -webkit-transform-origin: left top;
-          transform-origin: left top;
-  -webkit-transition: -webkit-transform .3s;
-  transition: -webkit-transform .3s;
-  transition: transform .3s;
-  transition: transform .3s, -webkit-transform .3s;
+  content: "⇨";
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: transform 0.3s;
 }
-
 main .inner .top-news p:hover::after {
-  -webkit-transform: scale(1, 1);
-          transform: scale(1, 1);
+  transform: scale(1, 1);
 }
-
 main .inner .top-news ul {
   width: 100%;
 }
-
 main .inner .top-news ul a {
   color: #000;
 }
-
 main .inner .top-news ul a li {
   margin: 0 0 5px;
   background-color: #eee;
   padding: 30px 20px 20px;
-  -webkit-transition: -webkit-transform .3s;
-  transition: -webkit-transform .3s;
-  transition: transform .3s;
-  transition: transform .3s, -webkit-transform .3s;
+  transition: transform 0.3s;
 }
-
 main .inner .top-news ul a li:hover {
-  -webkit-transform: translateX(-20px);
-          transform: translateX(-20px);
+  transform: translateX(-20px);
 }
-
 main .inner .top-news ul a span {
   font-family: Arial, Helvetica, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
   font-weight: bold;
@@ -546,36 +427,29 @@ main .inner .top-news ul a span {
   margin-bottom: 20px;
   line-height: 1.5em;
 }
-
 main .inner .top-news ul a time {
   display: block;
   color: #b4ad7e;
 }
-
 main .inner .top-news.on {
   opacity: 1;
 }
-
 main .inner .youtube {
   margin-bottom: 120px;
   position: relative;
 }
-
 main .inner .youtube .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
-
 main .inner .youtube .container .item {
-  width: calc(100%/3.1);
+  width: 33.3333333333%;
+  margin-right: 5%;
   position: relative;
   padding-top: 20%;
 }
-
+main .inner .youtube .container .item:nth-child(3n) {
+  margin-right: 0;
+}
 main .inner .youtube .container .item iframe {
   position: absolute;
   top: 0;
@@ -583,55 +457,38 @@ main .inner .youtube .container .item iframe {
   width: 100%;
   height: 100%;
 }
-
 main .inner .youtube p {
   position: absolute;
   top: 40px;
   right: 0;
-  -webkit-transition: -webkit-transform .3s;
-  transition: -webkit-transform .3s;
-  transition: transform .3s;
-  transition: transform .3s, -webkit-transform .3s;
+  transition: transform 0.3s;
 }
-
 main .inner .youtube p:hover {
-  -webkit-transform: translateX(-20px);
-          transform: translateX(-20px);
+  transform: translateX(-20px);
 }
-
 main .inner .youtube p::after {
   position: absolute;
   bottom: 0;
   right: -20px;
-  content: '⇨';
-  -webkit-transform: scale(0, 1);
-          transform: scale(0, 1);
-  -webkit-transform-origin: left top;
-          transform-origin: left top;
-  -webkit-transition: -webkit-transform .3s;
-  transition: -webkit-transform .3s;
-  transition: transform .3s;
-  transition: transform .3s, -webkit-transform .3s;
+  content: "⇨";
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: transform 0.3s;
 }
-
 main .inner .youtube p:hover::after {
-  -webkit-transform: scale(1, 1);
-          transform: scale(1, 1);
+  transform: scale(1, 1);
 }
 
 #news header, #profile header, #discography header, #video header, #fanclub header {
   position: fixed;
 }
-
 #news main, #profile main, #discography main, #video main, #fanclub main {
   margin-top: 0;
   padding-top: 150px;
 }
-
 #news main .inner, #profile main .inner, #discography main .inner, #video main .inner, #fanclub main .inner {
   margin: 0 10%;
 }
-
 #news main .inner h2, #profile main .inner h2, #discography main .inner h2, #video main .inner h2, #fanclub main .inner h2 {
   text-align: center;
 }
@@ -639,11 +496,8 @@ main .inner .youtube p:hover::after {
 #news main .inner ul.subnav, #discography main .inner ul.subnav, #video main .inner ul.subnav, #fanclub main .inner ul.subnav {
   text-align: center;
   margin-bottom: 60px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 #news main .inner ul.subnav li, #discography main .inner ul.subnav li, #video main .inner ul.subnav li, #fanclub main .inner ul.subnav li {
   height: 40px;
   line-height: 40px;
@@ -652,15 +506,12 @@ main .inner .youtube p:hover::after {
 #news main .inner ul.subnav li, #discography main .inner ul.subnav li, #video main .inner ul.subnav li {
   border: 1px solid #fff;
 }
-
 #news main .inner ul.subnav li:hover, #discography main .inner ul.subnav li:hover, #video main .inner ul.subnav li:hover {
   border-width: 2px;
 }
-
 #news main .inner ul.subnav li a, #discography main .inner ul.subnav li a, #video main .inner ul.subnav li a {
   display: block;
 }
-
 #news main .inner h3, #discography main .inner h3, #video main .inner h3 {
   padding-bottom: 10px;
   border-bottom: 2px solid #fff;
@@ -668,61 +519,48 @@ main .inner .youtube p:hover::after {
 }
 
 #discography main ul.subnav li, #video main ul.subnav li, #fanclub main ul.subnav li {
-  width: calc(100% / 2);
+  width: 50%;
 }
 
 #discography main section, #video main section {
   margin-bottom: 160px;
 }
-
 #discography main section .container, #video main section .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
-
 #discography main section .container .item, #video main section .container .item {
   opacity: 0;
-  width: calc(100% / 3);
+  width: 33.3333333333%;
   height: auto;
 }
-
 #discography main section .container .item:hover, #video main section .container .item:hover {
   background-color: #555;
 }
-
 #discography main section .container .item a, #video main section .container .item a {
   display: block;
   padding: 10%;
 }
-
 #discography main section .container .item a img, #video main section .container .item a img {
   width: 100%;
   border: 2px solid rgba(255, 255, 255, 0.4);
   border-radius: 2px;
 }
-
 #discography main section .container .item a p, #video main section .container .item a p {
   width: 100%;
   text-align: left;
   margin-top: 10px;
   line-height: 1.3em;
 }
-
 #discography main section .container .item a p time, #video main section .container .item a p time {
   color: #b4ad7e;
 }
-
 #discography main section .container .item a p:last-child, #video main section .container .item a p:last-child {
   font-family: Arial, Helvetica, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
 }
-
 #discography main section .container .item.on, #video main section .container .item.on {
   opacity: 1;
 }
-
 #discography main section:last-child, #video main section:last-child {
   margin-bottom: 120px;
 }
@@ -733,38 +571,30 @@ main .inner .youtube p:hover::after {
 }
 
 #news main ul.subnav li {
-  width: calc(100% / 3);
+  width: 33.3333333333%;
 }
-
 #news main ul.subnav li:first-child {
   border-width: 3px;
 }
-
 #news main ul.sub2020 li:first-child {
   border-width: 1px;
 }
-
 #news main ul.sub2020 li:nth-child(3) {
   border-width: 3px;
 }
-
 #news main ul.sub2021 li:first-child {
   border-width: 1px;
 }
-
 #news main ul.sub2021 li:nth-child(2) {
   border-width: 3px;
 }
-
 #news main .news-contents {
   margin: 0 2% 120px;
 }
-
 #news main .news-contents ul.newslist {
   margin-bottom: 30px;
   overflow: hidden;
 }
-
 #news main .news-contents ul.newslist li {
   margin-bottom: 30px;
   font-family: Arial, Helvetica, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
@@ -773,55 +603,37 @@ main .inner .youtube p:hover::after {
   line-height: 1.5em;
   opacity: 0;
 }
-
 #news main .news-contents ul.newslist li a {
   position: relative;
 }
-
 #news main .news-contents ul.newslist li a time {
   margin-right: 30px;
 }
-
 #news main .news-contents ul.newslist li a::after {
   position: absolute;
   bottom: -10px;
   left: 0;
-  content: '';
+  content: "";
   width: 100rem;
   height: 1px;
   background: #fff;
-  -webkit-transform: scale(0, 1);
-          transform: scale(0, 1);
-  -webkit-transform-origin: left top;
-          transform-origin: left top;
-  -webkit-transition: -webkit-transform .3s;
-  transition: -webkit-transform .3s;
-  transition: transform .3s;
-  transition: transform .3s, -webkit-transform .3s;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: transform 0.3s;
 }
-
 #news main .news-contents ul.newslist li a:hover::after {
-  -webkit-transform: scale(1, 1);
-          transform: scale(1, 1);
+  transform: scale(1, 1);
 }
-
 #news main .news-contents ul.newslist li.on {
   opacity: 1;
 }
-
 #news main .news-contents .news-button {
   text-align: center;
 }
-
 #news main .news-contents .news-button ul.button {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
-
 #news main .news-contents .news-button ul.button li {
   width: 40px;
   height: 40px;
@@ -829,46 +641,37 @@ main .inner .youtube p:hover::after {
   line-height: 40px;
   margin: 0 10px;
 }
-
 #news main .news-contents .news-button ul.button li a {
   display: block;
 }
-
 #news main .news-contents .news-button ul.button .page-button {
   width: 95px;
 }
-
 #news main .news-contents .news-button ul.button .back {
   border-color: #999;
   color: #999;
 }
-
 #news main .news-contents .news-button ul.button .button {
   border-width: 3px;
 }
-
 #news main .news-contents .news-button ul.button .next {
   border-color: #999;
   color: #999;
 }
-
-#news main .news-contents .news-button ul.news1 li:nth-child(n + 2):hover {
+#news main .news-contents .news-button ul.news1 li:nth-child(n+2):hover {
   border-width: 2px;
 }
-
-#news main .news-contents .news-button ul.news2 li:nth-child(-n + 3):hover {
+#news main .news-contents .news-button ul.news2 li:nth-child(-n+3):hover {
   border-width: 2px;
 }
 
 #profile main .inner {
   margin: 0 10%;
 }
-
 #profile main .inner article {
   text-align: center;
   margin-bottom: 160px;
 }
-
 #profile main .inner article h4 {
   font-size: 25px;
   font-weight: bold;
@@ -876,104 +679,81 @@ main .inner .youtube p:hover::after {
   margin-bottom: 30px;
   opacity: 0;
 }
-
 #profile main .inner article h4.on {
   opacity: 1;
 }
-
 #profile main .inner article p {
   opacity: 0;
 }
-
 #profile main .inner article p.on {
   opacity: 1;
 }
-
 #profile main .inner article figure img {
   width: 100%;
   margin-bottom: 40px;
   max-width: 980px;
 }
-
 #profile main .inner article figure figcaption {
   font-family: Arial, Helvetica, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
   line-height: 2em;
 }
-
 #profile main .inner h2 {
   opacity: 0;
 }
-
 #profile main .inner h2.on {
   opacity: 1;
 }
-
 #profile main .inner .gallery {
   margin-bottom: 120px;
 }
-
 #profile main .inner .gallery-sizer, #profile main .inner .gallery-item {
-  width: calc(100% / 3.3);
+  width: 30.303030303%;
   margin-bottom: 30px;
   opacity: 0;
 }
-
 #profile main .inner .gallery-sizer.on, #profile main .inner .gallery-item.on {
   opacity: 1;
 }
-
 #profile main .inner .gutter-sizer {
   width: 4%;
 }
-
 #profile main .inner .gallery-item {
   padding: 1.5rem;
   border: 1px solid #fff;
 }
-
 #profile main .inner .gallery-item img {
   width: 100%;
 }
-
 #profile .lg-backdrop.in {
   opacity: 0.7;
 }
 
 #discography .disc {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 #discography .disc .item {
   text-align: left;
-  width: calc(100% / 2);
+  width: 50%;
 }
-
 #discography .disc .item h3 {
   margin-bottom: 30px;
   line-height: 1.3em;
 }
-
 #discography .disc .item img {
   width: 100%;
   padding-right: 5%;
 }
-
 #discography .disc .item .track {
   font-size: 20px;
 }
-
 #discography .disc .item .track .item {
   width: 100%;
 }
-
 #discography .disc .item p, #discography .disc .item li {
   font-family: Arial, Helvetica, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
   margin: 0 3%;
   line-height: 1.5em;
 }
-
 #discography .disc .item ol li {
   list-style-type: decimal-leading-zero;
   margin-left: 2.5em;
@@ -982,7 +762,6 @@ main .inner .youtube p:hover::after {
 #fanclub main .inner section {
   margin-bottom: 100px;
 }
-
 #fanclub main .inner section .button {
   background-color: #b4ad7e;
   width: 30%;
@@ -992,109 +771,83 @@ main .inner .youtube p:hover::after {
   line-height: 43px;
   border-radius: 2px;
 }
-
 #fanclub main .inner section .button a {
   color: #000;
   font-weight: bold;
   display: block;
 }
-
 #fanclub main .inner section .button a:hover {
-  opacity: .5;
+  opacity: 0.5;
 }
-
 #fanclub main .inner section .link_cust {
   text-decoration: underline;
 }
-
 #fanclub main .inner section .link_cust:hover {
-  opacity: .7;
+  opacity: 0.7;
 }
-
 #fanclub main .inner section .newjoin {
   margin-bottom: 100px;
 }
-
 #fanclub main .inner section .newjoin .sphone-responsive {
   display: none;
 }
-
 #fanclub main .inner section ul.subnav li {
   background-color: #ccc;
   font-weight: bold;
   border: 1px solid #000;
 }
-
 #fanclub main .inner section ul.subnav li a {
   color: #000;
   display: block;
 }
-
 #fanclub main .inner section ul.subnav li a:hover {
-  opacity: .5;
+  opacity: 0.5;
 }
-
 #fanclub main .inner section .inner {
   margin: 0 3%;
   font-family: Arial, Helvetica, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
 }
-
 #fanclub main .inner section .inner .member {
   margin-bottom: 55px;
 }
-
 #fanclub main .inner section .inner h3 {
   padding-bottom: 10px;
   font-weight: bold;
   border-bottom: 1px solid #fff;
   margin-bottom: 30px;
 }
-
 #fanclub main .inner section .inner p {
   margin-bottom: 15px;
 }
-
 #fanclub main .inner section .inner ul li {
   margin: 0 0 10px 1.5em;
   line-height: 1.5em;
   list-style-type: square;
 }
-
 #fanclub main .inner section .inner ul .nodisc {
   list-style-type: none;
-  margin-left: .5em;
+  margin-left: 0.5em;
 }
-
 #fanclub main .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  align-items: baseline;
   padding-bottom: 10px;
   border-bottom: 2px solid #fff;
   margin-bottom: 50px;
 }
-
 #fanclub main .container h3 {
   font-weight: bold;
 }
-
 #fanclub main .container p {
   margin-left: 20px;
 }
-
 #fanclub main form {
   text-align: center;
 }
-
 #fanclub main form p {
   margin-bottom: 30px;
 }
-
 #fanclub main form input {
   height: 40px;
   margin-left: 5%;
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

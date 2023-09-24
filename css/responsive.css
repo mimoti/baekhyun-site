@@ -18,7 +18,6 @@
     font-size: 40px;
   }
 }
-
 @media screen and (max-width: 599px) {
   h2 {
     margin-bottom: 40px;
@@ -38,7 +37,6 @@
     line-height: 2.5em;
   }
 }
-
 @media screen and (max-width: 599px) {
   .humburger .sp-nav ul {
     top: 25%;
@@ -54,7 +52,6 @@
     display: none;
   }
 }
-
 @media screen and (max-width: 599px) {
   header {
     display: none;
@@ -74,15 +71,13 @@
   }
   footer .loginbanner img {
     padding: 2.5%;
-    -webkit-box-shadow: 10px 10px 20px #c5c4be, -10px -10px 20px #ffffff;
-            box-shadow: 10px 10px 20px #c5c4be, -10px -10px 20px #ffffff;
+    box-shadow: 10px 10px 20px #c5c4be, -10px -10px 20px #ffffff;
   }
   footer .loginbanner img:hover {
     opacity: 1;
   }
   footer .loginbanner img:active {
-    -webkit-box-shadow: inset 10px 10px 20px #c5c4be, inset -10px -10px 20px #ffffff;
-            box-shadow: inset 10px 10px 20px #c5c4be, inset -10px -10px 20px #ffffff;
+    box-shadow: inset 10px 10px 20px #c5c4be, inset -10px -10px 20px #ffffff;
   }
 }
 
@@ -97,7 +92,6 @@
     display: none;
   }
 }
-
 @media screen and (max-width: 599px) {
   .top-contents .new-news {
     bottom: 5vh;
@@ -112,7 +106,6 @@
     display: block;
   }
 }
-
 @media screen and (max-width: 375px) {
   .top-contents .new-news {
     background-color: rgba(0, 0, 0, 0.4);
@@ -137,11 +130,9 @@
     margin-bottom: 100px;
   }
   .slick-slider .slick-prev:hover:before, .slick-slider .slick-next:hover:before {
-    -webkit-animation-play-state: paused;
-            animation-play-state: paused;
+    animation-play-state: paused;
   }
 }
-
 @media screen and (max-width: 599px) {
   .slick-slider {
     margin-bottom: 80px;
@@ -153,7 +144,6 @@
     margin: 0 5%;
   }
 }
-
 @media screen and (max-width: 1024px) {
   main {
     padding-top: 80px;
@@ -170,18 +160,16 @@
     right: 1%;
   }
   main .inner .top-news p:hover {
-    -webkit-transform: none;
-            transform: none;
+    transform: none;
   }
   main .inner .top-news p::after {
     display: none;
   }
   main .inner .top-news p:hover::after {
-    -webkit-transform: none;
-            transform: none;
+    transform: none;
   }
   main .inner .top-news p a::after {
-    content: ' ⇨';
+    content: " ⇨";
   }
   main .inner .top-news ul a li {
     text-align: left;
@@ -203,17 +191,15 @@
     right: 1%;
   }
   main .inner .youtube p:hover {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
   }
   main .inner .youtube p::after {
     display: none;
   }
   main .inner .youtube p a::after {
-    content: ' ⇨';
+    content: " ⇨";
   }
 }
-
 @media screen and (max-width: 599px) {
   main .inner .top-news {
     margin-bottom: 80px;
@@ -240,12 +226,10 @@
     margin-bottom: 40px;
   }
   #discography main section .container, #video main section .container {
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    justify-content: space-between;
   }
   #discography main section .container .item, #video main section .container .item {
-    width: calc(100% / 2.2);
+    width: 45.4545454545%;
   }
   #discography main section .container .item:hover, #video main section .container .item:hover {
     background-color: #222;
@@ -277,7 +261,6 @@
     display: none;
   }
 }
-
 @media screen and (max-width: 599px) {
   #news main .news-contents {
     margin-bottom: 50px;
@@ -290,7 +273,7 @@
   #news main .news-contents ul.newslist li a time {
     display: block;
     margin-right: 0;
-    font-family: 'Josefin Sans', "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    font-family: "Josefin Sans", "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
     color: #b4ad7e;
   }
   #news main .news-contents .news-button ul.button li {
@@ -306,14 +289,13 @@
     margin-bottom: 90px;
   }
   #profile main .inner .gallery-sizer, #profile main .inner .gallery-item {
-    width: calc(100% / 2.1);
+    width: 47.619047619%;
   }
   #profile main .inner .gallery-item {
     padding: 2%;
     margin-bottom: 20px;
   }
 }
-
 @media screen and (max-width: 599px) {
   #profile main .inner article {
     margin-bottom: 80px;
@@ -339,7 +321,7 @@
     width: auto;
   }
   #discography .disc .item img {
-    width: calc(100% / 1.5);
+    width: 66.6666666667%;
     margin-bottom: 40px;
     padding-right: 0;
   }
@@ -347,12 +329,8 @@
     text-align: left;
   }
   #discography .disc .track {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    justify-content: space-between;
   }
   #discography .disc .track .item:first-child {
     width: 50%;
@@ -364,7 +342,6 @@
     margin-right: 0;
   }
 }
-
 @media screen and (max-width: 599px) {
   #discography .disc .item img {
     width: 100%;
@@ -376,10 +353,7 @@
     margin-bottom: 40px;
   }
   #discography .track {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   #discography .track .item {
     width: 100%;
@@ -397,7 +371,6 @@
     display: none;
   }
 }
-
 @media screen and (max-width: 599px) {
   #fanclub main .inner section {
     margin-bottom: 80px;
@@ -416,7 +389,7 @@
     text-align: left;
   }
   #fanclub main .inner section form::before {
-    content: '既に会員の方はこちら';
+    content: "既に会員の方はこちら";
     font-size: 16px;
     font-weight: bold;
     color: #333;
@@ -477,5 +450,4 @@
   #fanclub main .inner section:last-child {
     margin-bottom: 50px;
   }
-}
-/*# sourceMappingURL=responsive.css.map */
+}/*# sourceMappingURL=responsive.css.map */

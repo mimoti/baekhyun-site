@@ -502,11 +502,17 @@ main {
       position: relative;
       .container {
         display: flex;
-        justify-content: space-between;
+        // justify-content: space-between;
         .item {
-          width: calc(100%/3.1);
+          width: calc(100%/3);
+          margin-right: 5%;
           position:relative;
           padding-top:20%;
+
+          &:nth-child(3n) {
+            margin-right: 0;
+          }
+
           iframe {
             position:absolute;
             top:0;
